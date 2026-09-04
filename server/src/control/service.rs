@@ -37,7 +37,6 @@ pub struct ControlService {
     plugin_runtime: PluginRuntime,
     plugins: PluginRegistry,
     clients: crate::network::NetworkClients,
-    app_version: String,
     model_tests: Arc<Mutex<BTreeMap<String, CancellationToken>>>,
 }
 
@@ -149,7 +148,6 @@ impl ControlService {
         plugin_runtime: PluginRuntime,
         plugins: PluginRegistry,
         clients: crate::network::NetworkClients,
-        app_version: String,
     ) -> Result<Self> {
         Ok(Self {
             cursor_harness: CursorHarness::new(store.clone())?,
@@ -158,7 +156,6 @@ impl ControlService {
             plugin_runtime,
             plugins,
             clients,
-            app_version,
             model_tests: Arc::new(Mutex::new(BTreeMap::new())),
         })
     }

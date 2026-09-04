@@ -1053,7 +1053,7 @@
         },
         {
           "file": "shell/AppLayout.tsx",
-          "line": 115,
+          "line": 113,
           "column": 20
         }
       ]
@@ -1158,7 +1158,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 114,
+          "line": 112,
           "column": 14
         }
       ]
@@ -1863,7 +1863,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 89,
+          "line": 87,
           "column": 67
         }
       ]
@@ -2169,20 +2169,6 @@
         }
       ]
     },
-    "5d59857bf039cac9": {
-      "source": "Cursor 助手 v{version}",
-      "kind": "template",
-      "placeholders": [
-        "version"
-      ],
-      "refs": [
-        {
-          "file": "shell/AppHeader.tsx",
-          "line": 34,
-          "column": 18
-        }
-      ]
-    },
     "5f8d556a9c47da3c": {
       "source": "已关闭开机启动",
       "kind": "text",
@@ -2324,7 +2310,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 484,
+          "line": 483,
           "column": 43
         }
       ]
@@ -2463,7 +2449,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 54,
+          "line": 52,
           "column": 47
         }
       ]
@@ -2651,7 +2637,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 479,
+          "line": 478,
           "column": 43
         }
       ]
@@ -2805,7 +2791,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 426,
+          "line": 425,
           "column": 21
         }
       ]
@@ -3038,7 +3024,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 50,
+          "line": 48,
           "column": 29
         }
       ]
@@ -3141,7 +3127,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 48,
+          "line": 46,
           "column": 39
         }
       ]
@@ -3287,7 +3273,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 120,
+          "line": 118,
           "column": 11
         }
       ]
@@ -3645,7 +3631,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 116,
+          "line": 114,
           "column": 21
         }
       ]
@@ -3890,12 +3876,12 @@
         },
         {
           "file": "shell/AppLayout.tsx",
-          "line": 126,
+          "line": 124,
           "column": 64
         },
         {
           "file": "shell/AppLayout.tsx",
-          "line": 126,
+          "line": 124,
           "column": 125
         }
       ]
@@ -4733,7 +4719,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 75,
+          "line": 73,
           "column": 54
         }
       ]
@@ -4885,7 +4871,7 @@
         },
         {
           "file": "shell/AppLayout.tsx",
-          "line": 52,
+          "line": 50,
           "column": 29
         }
       ]
@@ -5050,7 +5036,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 49,
+          "line": 47,
           "column": 44
         }
       ]
@@ -5419,7 +5405,7 @@
         },
         {
           "file": "shell/AppLayout.tsx",
-          "line": 53,
+          "line": 51,
           "column": 46
         }
       ]
@@ -5669,7 +5655,7 @@
       "refs": [
         {
           "file": "shell/AppLayout.tsx",
-          "line": 55,
+          "line": 53,
           "column": 48
         }
       ]
