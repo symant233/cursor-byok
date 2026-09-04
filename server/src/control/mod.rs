@@ -1,5 +1,4 @@
 //! Exposes the local control API.
-mod ads;
 mod calls;
 mod harness;
 mod models;
@@ -111,11 +110,6 @@ fn proxy_error(error: impl std::fmt::Display) -> Response<Body> {
 
 pub fn api_router(service: ControlService) -> Router {
     Router::new()
-        .route("/__byok-api__/api/ads", get(ads::get))
-        .route(
-            "/__byok-api__/api/ads/{ad_id}/dismissals",
-            post(ads::dismiss),
-        )
         .route(
             "/__byok-api__/api/models",
             get(models::list).post(models::create),
