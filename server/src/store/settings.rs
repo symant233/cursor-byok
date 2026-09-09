@@ -16,8 +16,6 @@ const CURSOR_TAKEOVER_ENABLED_KEY: &str = "cursor_takeover_enabled";
 pub const DEFAULT_COMMIT_PROMPT_ZH_CN: &str = include_str!("../../prompt/cursor/commit/zh-CN.md");
 pub const DEFAULT_COMMIT_PROMPT_EN_US: &str = include_str!("../../prompt/cursor/commit/en-US.md");
 
-pub const PUBLIC_TAB_SERVICE_URL: &str = "https://tab.leokun.cn";
-
 #[derive(Clone, Copy, Debug, Default, Deserialize, PartialEq, Eq, Serialize)]
 pub struct PortSettings {
     pub proxy_port: u16,
@@ -42,7 +40,6 @@ impl ProxyMode {
 #[serde(rename_all = "snake_case")]
 pub enum TabMode {
     #[default]
-    Public,
     Direct,
     Custom,
 }
@@ -77,7 +74,6 @@ fn default_true() -> bool {
 impl TabSettings {
     pub fn service_url(&self) -> Option<&str> {
         match self.mode {
-            TabMode::Public => Some(PUBLIC_TAB_SERVICE_URL),
             TabMode::Direct => None,
             TabMode::Custom => Some(&self.address),
         }

@@ -192,7 +192,7 @@ fn is_local_path(path: &str) -> bool {
 }
 
 fn should_route_locally(path: &str, tab_mode: TabMode) -> bool {
-    is_local_path(path) || (is_tab_path(path) && tab_mode != TabMode::Direct)
+    is_local_path(path) || (is_tab_path(path) && tab_mode == TabMode::Custom)
 }
 
 #[cfg(test)]

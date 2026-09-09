@@ -131,7 +131,7 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 40,
+          "line": 39,
           "column": 98
         }
       ]
@@ -1094,7 +1094,7 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 36,
+          "line": 35,
           "column": 66
         },
         {
@@ -1569,7 +1569,7 @@
       "refs": [
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 68,
+          "line": 66,
           "column": 21
         }
       ]
@@ -1811,7 +1811,7 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 81,
+          "line": 79,
           "column": 81
         }
       ]
@@ -1988,12 +1988,12 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 32,
+          "line": 31,
           "column": 12
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 60,
+          "line": 58,
           "column": 41
         }
       ]
@@ -2060,7 +2060,7 @@
       "refs": [
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 44,
+          "line": 43,
           "column": 90
         }
       ]
@@ -2178,17 +2178,17 @@
       "refs": [
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 67,
+          "line": 65,
           "column": 22
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 73,
+          "line": 71,
           "column": 25
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 84,
+          "line": 82,
           "column": 20
         }
       ]
@@ -2202,23 +2202,6 @@
           "file": "features/settings/SettingsPage.tsx",
           "line": 239,
           "column": 21
-        }
-      ]
-    },
-    "5a3bd99fa69a40c1": {
-      "source": "使用公益服务",
-      "kind": "text",
-      "placeholders": [],
-      "refs": [
-        {
-          "file": "features/settings/TabSettingsCard.tsx",
-          "line": 30,
-          "column": 35
-        },
-        {
-          "file": "features/settings/TabSettingsCard.tsx",
-          "line": 58,
-          "column": 41
         }
       ]
     },
@@ -2463,7 +2446,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 509,
+          "line": 511,
           "column": 43
         }
       ]
@@ -2790,7 +2773,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 504,
+          "line": 506,
           "column": 43
         }
       ]
@@ -2944,7 +2927,7 @@
       "refs": [
         {
           "file": "shared/api.ts",
-          "line": 448,
+          "line": 450,
           "column": 21
         }
       ]
@@ -3242,7 +3225,7 @@
       "refs": [
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 52,
+          "line": 51,
           "column": 21
         }
       ]
@@ -3395,17 +3378,17 @@
       "refs": [
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 51,
+          "line": 50,
           "column": 22
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 56,
+          "line": 55,
           "column": 24
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 80,
+          "line": 78,
           "column": 20
         }
       ]
@@ -3761,7 +3744,7 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 37,
+          "line": 36,
           "column": 103
         },
         {
@@ -4128,12 +4111,12 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 31,
+          "line": 30,
           "column": 35
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 59,
+          "line": 57,
           "column": 41
         }
       ]
@@ -6017,7 +6000,7 @@
         },
         {
           "file": "features/settings/TabSettingsCard.tsx",
-          "line": 37,
+          "line": 36,
           "column": 91
         }
       ]

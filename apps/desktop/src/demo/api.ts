@@ -93,7 +93,7 @@ let proxySettings: ProxySettings = {
   username: "",
   has_password: false,
 };
-let tabSettings: TabSettings = { mode: "public", address: "" };
+let tabSettings: TabSettings = { mode: "direct", address: "" };
 let storage: StatisticsStorage = { bytes: 26_004_480, call_count: calls.length, trace_count: calls.length };
 
 export function installDemoApi() {
