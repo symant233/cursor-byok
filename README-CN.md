@@ -1,3 +1,10 @@
+> [!TIP]
+> 这是个人 fork，相对上游 [leookun/cursor-byok](https://github.com/leookun/cursor-byok) 的改动：
+> - 移除侧栏广告及 token 统计中的 "@leookun stole 1 token" 彩蛋。
+> - 应用标题改为 "Cursor BYOK"。
+> - TAB 与 commit 消息功能默认直连 Cursor 上游，并移除 TAB 公益服务。
+> - 更新检查指向本 fork 自己的 GitHub Releases。
+
 <div align="center">
 
 # cursor-byok

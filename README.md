@@ -1,3 +1,10 @@
+> [!TIP]
+> This is a personal fork with the following modifications over upstream [leookun/cursor-byok](https://github.com/leookun/cursor-byok):
+> - Removed the sidebar advertisements and the "@leookun stole 1 token" easter egg from the token breakdown.
+> - App title is now "Cursor BYOK".
+> - TAB and commit-message features connect directly to the Cursor upstream by default; the public TAB service is removed.
+> - Update checks point at this fork's own GitHub Releases.
+
 <div align="center">
 
 # cursor-byok
