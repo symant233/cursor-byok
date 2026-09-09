@@ -28,7 +28,7 @@ const tutorialReadStorageKey = "cursor-byok:tutorial-read";
 const tutorialUrl = "https://docs.leokun.cn";
 
 export function AppLayout() {
-  const { busy } = useAppStore();
+  const { busy, cursorHarness } = useAppStore();
   const { availableVersion } = useUpdateStore();
   const message = useMessage();
   const location = useLocation();
@@ -100,6 +100,12 @@ export function AppLayout() {
                 ? <Icon src={item.icon} size="1.3em" />
                 : <Icon icon={item.icon} size="1.3em" />}
               <span>{item.label}</span>
+              {item.path === "/harness/cursor" && cursorHarness && <span
+                className={styles.menuStatusTag}
+                data-taken={cursorHarness.settings_applied || undefined}
+              >
+                {cursorHarness.settings_applied ? t("已接管") : t("未接管")}
+              </span>}
               {item.path === "/settings" && availableVersion && <span className={styles.menuIndicatorDot} aria-hidden="true" />}
             </NavLink>
           </div>}
