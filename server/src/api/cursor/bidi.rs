@@ -160,18 +160,18 @@ pub fn decode(request: &ai::BidiAppendRequest) -> Result<DecodedAppend> {
         .map(|id| id.request_id.as_str())
         .filter(|id| !id.is_empty())
         .ok_or_else(|| Error::Protocol("BidiAppend request_id is required".into()))?;
-    if !request.data_binary.is_empty() {
-        return Err(Error::Protocol(
-            "BidiAppend data_binary is not part of the captured protocol".into(),
-        ));
-    }
-    if request.data.is_empty() {
+    // Newer Cursor clients carry the AgentClientMessage as raw proto bytes in
+    // data_binary; the captured protocol used hex-encoded data. Accept both.
+    let payload = if !request.data_binary.is_empty() {
+        request.data_binary.clone()
+    } else if !request.data.is_empty() {
+        hex::decode(&request.data)
+            .map_err(|error| Error::Protocol(format!("invalid BidiAppend hex: {error}")))?
+    } else {
         return Err(Error::Protocol(
             "BidiAppend contains no AgentClientMessage".into(),
         ));
-    }
-    let payload = hex::decode(&request.data)
-        .map_err(|error| Error::Protocol(format!("invalid BidiAppend hex: {error}")))?;
+    };
     Ok(DecodedAppend {
         request_id: request_id.into(),
         seqno: request.append_seqno,
@@ -208,4 +208,54 @@ pub async fn append(
         })
         .await?;
     Ok(ai::BidiAppendResponse {})
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn heartbeat_request(data: String, data_binary: Vec<u8>) -> ai::BidiAppendRequest {
+        ai::BidiAppendRequest {
+            data,
+            request_id: Some(ai::BidiRequestId {
+                request_id: "req-1".into(),
+            }),
+            append_seqno: 1,
+            data_binary,
+        }
+    }
+
+    fn heartbeat_message() -> agent::AgentClientMessage {
+        agent::AgentClientMessage {
+            message: Some(agent::agent_client_message::Message::ClientHeartbeat(
+                agent::ClientHeartbeat {},
+            )),
+        }
+    }
+
+    #[test]
+    fn decodes_binary_appends() {
+        let request = heartbeat_request(String::new(), heartbeat_message().encode_to_vec());
+        let decoded = decode(&request).unwrap();
+        assert_eq!(decoded.request_id, "req-1");
+        assert_eq!(decoded.seqno, 1);
+        assert!(matches!(
+            decoded.message.message,
+            Some(agent::agent_client_message::Message::ClientHeartbeat(_))
+        ));
+    }
+
+    #[test]
+    fn decodes_hex_appends() {
+        let request = heartbeat_request(hex::encode(heartbeat_message().encode_to_vec()), Vec::new());
+        assert!(matches!(
+            decode(&request).unwrap().message.message,
+            Some(agent::agent_client_message::Message::ClientHeartbeat(_))
+        ));
+    }
+
+    #[test]
+    fn rejects_appends_without_payload() {
+        assert!(decode(&heartbeat_request(String::new(), Vec::new())).is_err());
+    }
 }
